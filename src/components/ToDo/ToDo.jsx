@@ -48,12 +48,12 @@ export default function ToDo() {
           return (
             <li
               key={todo.id}
-              className="text-white flex justify-between items-center bg-rose-700 p-2 rounded-md"
+              className="text-white flex justify-between items-center bg-rose-700 p-2 rounded-md mb-4"
             >
               {editingId === todo.id ? (
                 <>
                   <input
-                    className="bg-rose-700 text-white rounded-md p-1"
+                    className="bg-rose-700 text-white rounded-md p-1 "
                     value={editTitle}
                     onChange={(e) => setEditTitle(e.target.value)}
                   />
@@ -67,7 +67,7 @@ export default function ToDo() {
               ) : (
                 <>
                   <span>{todo.title}</span>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 ">
                     <FaPenToSquare
                       className="cursor-pointer"
                       onClick={() => handleEditTask(todo.id, todo.title)}
